@@ -4,7 +4,7 @@ interface ISize {
   height: number
 }
 
-defineProps<ISize>()
+defineProps<ISize>();
 </script>
 
 <template>
