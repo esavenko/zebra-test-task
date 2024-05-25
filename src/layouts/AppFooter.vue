@@ -20,10 +20,6 @@ import MainLogo from '../../public/logos/MainLogo.vue';
 
 <style scoped>
 .footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
   background-color: var(--footer-color);
 }
 

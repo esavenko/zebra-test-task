@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PostHeader from "@/components/PostHeader.vue";
-import NewsList from "@/components/NewsList.vue";
+import PostHeader from '@/components/PostHeader.vue';
+import NewsList from '@/components/NewsList.vue';
 </script>
 
 <template>

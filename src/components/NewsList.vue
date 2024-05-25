@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import NewsItem from "@/components/NewsItem.vue";
+import { useNewsStore } from '@/stores/news.store';
+import { onMounted } from 'vue';
 
-import {useNewsStore} from '@/stores/news.store';
-import {onMounted} from "vue";
+import NewsItem from '@/components/NewsItem.vue';
 
 const newsStore = useNewsStore();
 
 onMounted(() => {
-  newsStore.getAllNews()
+  newsStore.getAllNews();
 });
-
-console.log(newsStore.news)
 </script>
 
 <template>
@@ -21,6 +19,7 @@ console.log(newsStore.news)
             v-for="news of newsStore.news"
             :key="news.code"
             :news="news"
+            class="news-list__item"
         />
       </div>
     </div>
@@ -36,6 +35,11 @@ console.log(newsStore.news)
 .news-list__wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
+}
+
+.news-list__item {
+  cursor: pointer;
 }
 </style>
