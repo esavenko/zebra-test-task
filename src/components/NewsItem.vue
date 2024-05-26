@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import type { INews } from '@/types/interfaces';
+import {computed} from 'vue';
+import type {INews} from '@/types/interfaces';
 
 const props = defineProps<{ news: INews }>();
 
@@ -16,6 +16,7 @@ const formattedDate = computed(() => {
 
 <template>
   <div class="news-item">
+
     <div
         v-if="news.image"
         class="news-item__bg"
@@ -26,30 +27,35 @@ const formattedDate = computed(() => {
           class="news-item__img"
       />
     </div>
-    <div class="news-item__date">{{ formattedDate }}</div>
-    <div class="news-item__title">{{ news.name }}</div>
-    <div class="news-item__desc">{{ news.previewText }}</div>
-    <div class="news-item__type">{{ news.type.value }}</div>
+    <div class="news-item__wrap">
+      <div class="news-item__date">{{ formattedDate }}</div>
+      <div class="news-item__title">{{ news.name }}</div>
+      <div class="news-item__desc">{{ news.previewText }}</div>
+      <div class="news-item__type">{{ news?.type?.value }}</div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .news-item {
+  position: relative;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 16px;
-  padding: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 400px;
+  max-width: 535px;
+  height: 650px;
+}
+
+.news-item__wrap {
+  padding: 32px;
 }
 
 .news-item__bg {
   width: 100%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -64,34 +70,32 @@ const formattedDate = computed(() => {
 }
 
 .news-item__date {
-  margin-top: 16px;
-  color: #888888;
-  font-size: 14px;
+  color: #A1A7B5;
+  font-size: 18px;
   align-self: flex-start;
 }
 
 .news-item__title {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
+  margin: 16px 0;
+  font-size: clamp(1rem, 0.925rem + 0.38vw, 1.375rem);
+  color: var(--title-color);
 }
 
 .news-item__desc {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #666666;
-  text-align: center;
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
+  letter-spacing: -1px;
+  color: var(--text-color);
 }
 
 .news-item__type {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
   font-size: 14px;
-  font-weight: bold;
-  color: #007bff;
-  background-color: #e0f7ff;
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: var(--type-color);
+  background-color: #F0F6FE;
+  padding: 4px 16px;
+  border-radius: 30px;
   align-self: flex-start;
 }
 </style>
