@@ -8,7 +8,3 @@ import AppFooter from '@/layouts/AppFooter.vue';
   <slot />
   <app-footer />
 </template>
-
-<style scoped>
-
-</style>

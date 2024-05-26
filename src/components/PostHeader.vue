@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <section class="post-header__wrapper">
     <div class="post-header__container">
@@ -23,6 +19,7 @@
 
 .post-header__container {
   max-width: var(--container-val);
+  padding: 0 20px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -34,7 +31,7 @@
 }
 
 .title-block__title {
-  font-size: 40px;
+  font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
   font-weight: 700;
   letter-spacing: -1px;
 }

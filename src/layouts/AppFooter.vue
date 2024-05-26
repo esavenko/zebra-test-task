@@ -26,6 +26,7 @@ import MainLogo from '../../public/logos/MainLogo.vue';
 .footer__container {
   max-width: var(--container-val);
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer__wrap {

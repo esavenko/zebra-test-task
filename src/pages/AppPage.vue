@@ -9,7 +9,3 @@ import NewsList from '@/components/NewsList.vue';
   <news-list />
 </main>
 </template>
-
-<style scoped>
-
-</style>
