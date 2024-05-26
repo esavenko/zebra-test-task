@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useNewsStore} from '@/stores/news.store';
+import { useNewsStore } from '@/stores/news.store';
 
 const newsStore = useNewsStore();
 </script>

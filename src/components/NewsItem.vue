@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import {computed} from 'vue';
-import type {INews} from '@/types/interfaces';
+import { computed } from 'vue';
+import type { INews } from '@/types/interfaces';
 
 const props = defineProps<{ news: INews }>();
 

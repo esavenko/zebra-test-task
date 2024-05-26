@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {useNewsStore} from '@/stores/news.store';
-import {onMounted} from 'vue';
+import { useNewsStore } from '@/stores/news.store';
+import { onMounted } from 'vue';
 
 import NewsItem from '@/components/NewsItem.vue';
-import MoreButton from "@/components/ui/MoreButton.vue";
-import Loader from "@/layouts/Loader.vue";
+import MoreButton from '@/components/ui/MoreButton.vue';
+import Loader from '@/layouts/Loader.vue';
 
 const newsStore = useNewsStore();
 

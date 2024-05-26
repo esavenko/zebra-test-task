@@ -1,8 +1,8 @@
-import {defineStore} from 'pinia';
+import { defineStore } from 'pinia';
 import axios from 'axios';
-import type {INews} from '@/types/interfaces';
+import type { INews } from '@/types/interfaces';
 
-import {ref} from 'vue';
+import { ref } from 'vue';
 
 const URL = 'http://flems.github.io/test/api/news/';
 
@@ -25,7 +25,7 @@ export const useNewsStore = defineStore('newsStore', () => {
     const getMoreNews = async (page: number) => {
         try {
             isLoading.value = true;
-            const res = await axios.get(`${URL}/${page}`)
+            const res = await axios.get(`${URL}/${page}`);
             news.value.push(...res.data.items);
             hasMoreNews.value = false;
             isLoading.value = false;
