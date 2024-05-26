@@ -4,7 +4,7 @@ import type { INews } from '@/types/interfaces';
 
 import { ref } from 'vue';
 
-const URL = 'http://flems.github.io/test/api/news/';
+const URL = 'https://flems.github.io/test/api/news/';
 
 export const useNewsStore = defineStore('newsStore', () => {
     const news = ref<INews[]>([]);
