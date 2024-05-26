@@ -4,7 +4,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/zebra-test-task/',
             name: 'Home',
             component: () => import('@/pages/AppPage.vue')
         }
